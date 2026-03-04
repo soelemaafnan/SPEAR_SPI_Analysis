@@ -40,3 +40,7 @@ How to run:
   1. Update the "config.yaml" file with your desired input/output locations.
   2. Update the "myjob.sl" file with the correct location for the source file.
   3. Submit the job using "sbatch myjob.sl" command.
+
+> [DISCLAIMER]
+> **THIS IS A TEST REPOSITORY.**
+> The code and data outputs provided here are for internal testing and development purposes only.
