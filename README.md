@@ -11,15 +11,13 @@ This tool is designed to:
 ## Installation
 
 1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/yourusername/SPEAR_SPI_Analysis.git](https://github.com/yourusername/SPEAR_SPI_Analysis.git)
+
+    git clone https://github.com/soelemaafnan/SPEAR_SPI_Analysis.git
     cd SPEAR_SPI_Analysis
-    ```
 
 2.  Install dependencies:
-    ```bash
+    
     pip install -r requirements.txt
-    ```
 
 ## Usage
 
