@@ -1,0 +1,45 @@
+# ==========================================
+# CONFIGURATION FOR SPEAR ENSEMBLE SPI ANALYSIS
+# ==========================================
+
+# 1. ENSEMBLE SETTINGS
+# The script will construct paths dynamically:
+# {base_dir} / {dir_prefix}{id} / {sub_dir}
+ensemble:
+  # The common root folder for the experiment
+  # base_dir: "/data/2/GFDL-LARGE-ENSEMBLES/TFTEST/SPEAR_c192_o1_Hist_AllForc_IC1921_K50/"
+  base_dir: "/data/2/GFDL-LARGE-ENSEMBLES/TFTEST/SPEAR_c192_o1_Scen_SSP585_IC2011_K50/"
+  
+  # The folder name pattern for members (e.g., "pp_ens_01", "pp_ens_02"...)
+  dir_prefix: "pp_ens_"  
+  
+  # The specific sub-folder where the .nc files live inside each member's dir
+  sub_dir: "atmos_4xdaily_avg/ts/6hr/10yr/"
+  
+  # The range of members to process (inclusive)
+  start_member: 1
+  end_member: 30
+
+# 2. OUTPUT SETTINGS
+output_directory: "spi_outputs_ensemble_mean_fut"
+output_filename_prefix: "SPI3_USA_EnsembleMean"
+
+# 3. DATA SETTINGS
+variable_name: "precip"
+file_pattern: "*precip.nc"
+
+# 4. SPATIAL CROP (USA Bounding Box)
+# Crucial for performance! We crop the global data before averaging.
+# GFDL longitude is 0-360. 
+# Continental US is approx Lat 24-50, Lon 235-295 (125W to 65W)
+region:
+  lat_min: 24
+  lat_max: 50
+  lon_min: 235
+  lon_max: 295
+
+# 5. SPI CALCULATION SETTINGS
+spi:
+  scale: 3               # SPI-3 (3-Month Running Window)
+  base_period_start: 1921
+  base_period_end: 2010

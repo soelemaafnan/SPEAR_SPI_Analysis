@@ -1,0 +1,29 @@
+# --- Data Files (Never upload these) ---
+*.nc
+*.hdf5
+*.grib
+
+# --- Output Directories ---
+spi_outputs_*/
+frames_*/
+outputs/
+
+# --- Python Cache ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- System Logs ---
+*.log
+*.out
+*.err
+
+# --- Images/Animations (Optional: keep if you want to show off results) ---
+*.png
+*.jpg
+# Uncomment next line to ignore GIFs
+# *.gif
+
+# --- IDE Settings ---
+.vscode/
+.idea/
