@@ -35,3 +35,8 @@ region:
   lat_max: 50
   lon_min: 235
   lon_max: 295
+
+How to run:
+  1. Update the "config.yaml" file with your desired input/output locations.
+  2. Update the "myjob.sl" file with the correct location for the source file.
+  3. Submit the job using "sbatch myjob.sl" command.
